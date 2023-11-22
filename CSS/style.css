@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+
+    background-color: rgb(43, 42, 76);
+}
+
+.navfont{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.links a{
+    margin-left: 2vw;
+    margin-right: 2vw; 
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    object-fit: fill;
+    z-index: -1;
+}
+
+article{
+    position: fixed;
+    background-color: rgba(233, 144, 108, 0.35);
+    height: 27.5vh;
+    padding: 1vw;
+    width: 100%;
+
+    margin-top: 27.5vh;
+}
+
+.heading{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: xx-large;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.text{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: medium;
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    text-align: center;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(43, 42, 76);
+}
+
+.icons{
+    background: url(../IMAGES/SPRITE.png);
+    background-repeat: no-repeat; 
+    width: 66px;
+    height: 66px;
+    display: inline-block;
+    z-index: 1;
+    border-radius: 16%;
+}
+
+.imagebackground
+{
+    display: none
+}
+
+#Facebook{background-position: -439px -146px;}
+
+#Twitter{background-position: -66px -72px;}
+
+#Youtube{background-position: -439px -221px;}
+
+#Pinterest{background-position: -141px -221px;}
+
+
+/** RESIZING **/
+@media screen and (max-width: 600px) 
+{
+    nav{
+        position: relative;
+    }
+
+    .pagetitle
+    {
+        background-color: rgb(238, 226, 222);
+        border-radius: 10%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        padding: 0.5vw;
+        color: black;
+    }
+
+    .links{
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+
+        padding: 1vw;
+
+        background-color: rgb(234, 144, 108);
+        border-radius: 10%;
+        margin-top: 5vh;
+    }
+
+    .links a{
+        color: white;
+        padding: 12px 16px;
+        display: block;
+
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .links a:hover
+    { 
+        background-color: rgb(43, 42, 76);
+        border-radius: 10%;
+    }
+
+    nav:hover .links{display: block}
+
+    nav:hover .pagetitle{
+        background-color: rgb(238, 226, 222);
+    }
+
+    .background
+    {
+        display: none;
+    }
+
+    .imagebackground
+    {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+        z-index: -1;
+        display: block;
+        object-position: -125px;
+    }
+}
